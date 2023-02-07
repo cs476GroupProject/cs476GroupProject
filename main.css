@@ -26,3 +26,12 @@
     clear: both;
     display: block;
 }
+
+.leftborder {
+    float: left;
+    border-style:solid;
+    border-width:1px;
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+}
