@@ -1,4 +1,16 @@
-.center {
-    text-align: center;
-    border: 3px solid green;
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+    height: 200px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
