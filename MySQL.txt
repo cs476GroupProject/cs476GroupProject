@@ -1,0 +1,106 @@
+mysql> use 476_webmap
+Database changed
+mysql> show tables
+    -> ;
+Empty set (0.01 sec)
+
+mysql> CREATE TABLE Users(
+    -> uid INT NOT NULL AUTO_INCREMENT,
+    -> name VARCHAR(200),
+    -> password VARCHAR(255),
+    -> email VARCHAR(255),
+    -> preference VARCHAR(255)
+    -> ,
+    -> PRIMARY KEY(uid)
+    -> );
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> CREATE TABLE news(
+    -> nid INT NOT NULL AUTO_INCREMENT,
+    -> type VARCHAR(50),
+    -> URL VARCHAR(2000),
+    -> image VARCHAR(255),
+    -> uid INT,
+    -> PRIMARY KEY(nid),
+    -> FOREIGN KEY(uid) REFERENCES Users(uid)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> CREATE TABLE website(
+    -> wid INT NOT NULL AUTO_INCREMENT,
+    -> URL VARCHAR(2000),
+    -> sitename VARCHAR(50),
+    -> image VARCHAR(255),
+    -> sitetype VARCHAR(50),
+    -> PRIMARY KEY(wid)
+    -> );
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> CREATE TABLE customized(
+    -> cid INT NOT NULL AUTO_INCREMENT,
+    -> URL VARCHAR(2000),
+    -> sitename VARCHAR(50),
+    -> uid INT,
+    -> PRIMARY KEY(cid),
+    -> FOREIGN KEY(uid) REFERENCES Users(uid)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> show tables
+    -> ;
++----------------------+
+| Tables_in_476_webmap |
++----------------------+
+| Users                |
+| customized           |
+| news                 |
+| website              |
++----------------------+
+4 rows in set (0.00 sec)
+
+mysql> Describe Users;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| uid        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| name       | varchar(200) | YES  |     | NULL    |                |
+| password   | varchar(255) | YES  |     | NULL    |                |
+| email      | varchar(255) | YES  |     | NULL    |                |
+| preference | varchar(255) | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> Describe news;
++-------+---------------+------+-----+---------+----------------+
+| Field | Type          | Null | Key | Default | Extra          |
++-------+---------------+------+-----+---------+----------------+
+| nid   | int(11)       | NO   | PRI | NULL    | auto_increment |
+| type  | varchar(50)   | YES  |     | NULL    |                |
+| URL   | varchar(2000) | YES  |     | NULL    |                |
+| image | varchar(255)  | YES  |     | NULL    |                |
+| uid   | int(11)       | YES  | MUL | NULL    |                |
++-------+---------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> Describe website;
++----------+---------------+------+-----+---------+----------------+
+| Field    | Type          | Null | Key | Default | Extra          |
++----------+---------------+------+-----+---------+----------------+
+| wid      | int(11)       | NO   | PRI | NULL    | auto_increment |
+| URL      | varchar(2000) | YES  |     | NULL    |                |
+| sitename | varchar(50)   | YES  |     | NULL    |                |
+| image    | varchar(255)  | YES  |     | NULL    |                |
+| sitetype | varchar(50)   | YES  |     | NULL    |                |
++----------+---------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)
+
+mysql> Describe customized;
++----------+---------------+------+-----+---------+----------------+
+| Field    | Type          | Null | Key | Default | Extra          |
++----------+---------------+------+-----+---------+----------------+
+| cid      | int(11)       | NO   | PRI | NULL    | auto_increment |
+| URL      | varchar(2000) | YES  |     | NULL    |                |
+| sitename | varchar(50)   | YES  |     | NULL    |                |
+| uid      | int(11)       | YES  | MUL | NULL    |                |
++----------+---------------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
