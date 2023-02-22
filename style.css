@@ -21,6 +21,8 @@ header {
 
 .weather {
     text-align: center;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size: 20px;
 }
 
 .login button {
@@ -77,8 +79,8 @@ header {
 }
 
 .links-grid img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 60%;
+    max-height: 60%;
     object-fit: contain;
 }
 
