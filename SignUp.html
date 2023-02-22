@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>SignUp</title>
+
+	<script type="text/javascript" src="signuppageValidate.js"> </script>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<signup>
+		<header>
+			<img src="logo.png" alt="logo" style="width: 20%;height:80%" />
+			<h1>Sign-Up</h1>
+		</header>
+
+		<main>
+			<form name="signup" action="#" method="post" onsubmit="return validateForm()">
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username"><br><br>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email"><br><br>
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password"><br><br>
+				<label for="confirm-password">Confirm Password:</label>
+				<input type="password" id="confirm-password" name="confirm-password"><br><br>
+
+				<label for="interesting-topics">Choose three your interesting topics :</label><br>
+				<input type="checkbox" name="intersted" value="Music"> Music
+				<input type="checkbox" name="intersted" value="Video"> Video
+				<input type="checkbox" name="intersted" value="Sport"> Sport
+				<input type="checkbox" name="intersted" value="Tech"> Tech<br>
+				<input type="checkbox" name="intersted" value="Game"> Game
+				<input type="checkbox" name="intersted" value="Economic"> Economic
+				<input type="checkbox" name="intersted" value="Politics"> Politics
+				<input type="checkbox" name="intersted" value="Other"> Other<br><br>
+
+
+				<input type="submit" value="Sign Up">
+			</form>
+
+		</main>
+
+
+	</signup>
+
+</body>
+
+</html>
