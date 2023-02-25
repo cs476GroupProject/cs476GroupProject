@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Log-In</title>
+	<script type="text/javascript" src="loginValidate.js"> </script>
 	<link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -13,7 +14,7 @@
 		<img src="logo.png" alt="logo" style="width: 20%;height:80%" />
 		<h1>Log-In</h1>
 
-		<form action="#" method="post">
+		<form action="" method="post" onsubmit="return validateForm()">
 			<label for="username">Username:</label>
 			<input type="text" id="username" name="username"><br><br>
 			<label for="password">Password:</label>
