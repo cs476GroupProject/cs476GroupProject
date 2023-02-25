@@ -53,8 +53,9 @@ header {
 }
 
 .popular-links h2 {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 20px;
+    font-family: URW Chancery L, cursive;
 }
 
 .links-grid {
@@ -93,8 +94,9 @@ header {
 }
 
 .news-recommendations h2 {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 20px;
+    font-family: URW Chancery L, cursive;
 }
 
 .news-grid {
