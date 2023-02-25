@@ -21,8 +21,8 @@ header {
 
 .weather {
     text-align: center;
-    font-family:Arial,Helvetica,sans-serif;
-    font-size: 20px;
+    font-family:"OCR A Std", monospace;
+    font-size: 30px;
 }
 
 .login button {
