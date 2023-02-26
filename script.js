@@ -23,7 +23,6 @@ window.addEventListener('load', () => {
 
         dateInfo.textContent = `${date} ${time}`;
     }
-
     setInterval(updateInfo, 1000);
 });
 
@@ -36,7 +35,6 @@ window.addEventListener('scroll', function() {
     } else {
         header.classList.remove('sticky');
     }
-
     if (scrollPosition > header.offsetTop) {
         header.classList.add('header-hidden');
     } else {
