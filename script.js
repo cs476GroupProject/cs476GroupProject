@@ -1,13 +1,9 @@
 window.addEventListener('load', () => {
     //const weatherInfo = document.getElementById('weather-info');
     const dateInfo = document.getElementById('date-info');
-
-    // Function to update the weather and date information
     function updateInfo() {
-        // Get the current date and time
         const now = new Date();
 
-        // Format the date and time
         const date = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
         const time = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
         /*
@@ -25,10 +21,29 @@ window.addEventListener('load', () => {
 
          */
 
-        // Set the weather and date information
         dateInfo.textContent = `${date} ${time}`;
     }
 
-    // Call the updateInfo function every second
     setInterval(updateInfo, 1000);
 });
+
+window.addEventListener('scroll', function() {
+    var header = document.querySelector('header');
+    var scrollPosition = window.scrollY;
+
+    if (scrollPosition >= header.offsetHeight) {
+        header.classList.add('sticky');
+    } else {
+        header.classList.remove('sticky');
+    }
+
+    if (scrollPosition > header.offsetTop) {
+        header.classList.add('header-hidden');
+    } else {
+        header.classList.remove('header-hidden');
+    }
+});
+
+
+
+

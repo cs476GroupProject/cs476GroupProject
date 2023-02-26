@@ -8,6 +8,19 @@ header {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.header-hidden {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.header-hidden .logo,
+.header-hidden .login {
+    display: none;
+}
+
+
 .logo {
     width: 200px;
     height: 200px;
@@ -85,6 +98,12 @@ header {
     object-fit: contain;
 }
 
+/* Increase size of image on hover */
+.links-grid a:hover img {
+    transform: scale(1.2);
+}
+
+
 .news-recommendations {
     margin-top: 50px;
     background-color: #fff;
@@ -148,6 +167,14 @@ header {
 
 .news-column:after {
     right: 0;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
 }
 
 
