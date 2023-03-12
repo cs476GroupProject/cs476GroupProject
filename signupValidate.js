@@ -46,8 +46,8 @@ function validateForm() {
     }
   }
   
-  if (checkedCount < 3) {
-    alert("Please select at least three interesing topics");
+  if (checkedCount != 3) {
+    alert("Please select at three interesing topics");
     return false;
   }
 
