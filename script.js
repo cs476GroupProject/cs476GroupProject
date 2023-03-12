@@ -44,6 +44,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
+/*
 function openPopup() {
     // Create the popup element
     var popup = document.createElement("div");
@@ -71,4 +72,68 @@ function openPopup() {
     // Add the popup to the body
     document.body.appendChild(popup);
 }
+
+ */
+
+
+function openPopup() {
+    // Create the popup element
+    var popup = document.createElement("div");
+    popup.id = "popup";
+    popup.style.position = "fixed";
+    popup.style.top = "50%";
+    popup.style.left = "50%";
+    popup.style.transform = "translate(-50%, -50%)";
+    popup.style.background = "white";
+    popup.style.padding = "20px";
+    popup.style.border = "1px solid black";
+
+    // Add a form for uploading images and submitting a web link
+    popup.innerHTML = `
+    <h2>Customize Image</h2>
+    <form>
+      <label for="image-file">Upload Image:</label>
+      <input type="file" id="image-file" name="image-file"><br><br>
+      <label for="web-link">Submit Web Link:</label>
+      <input type="text" id="web-link" name="web-link"><br><br>
+      <button type="submit">Submit</button>
+    </form>
+  `;
+
+    // Add the popup to the body
+    document.body.appendChild(popup);
+}
+
+
+/*
+function openPopup() {
+    // Create the popup element
+    var popup = document.createElement("div");
+    popup.id = "popup";
+    popup.style.position = "fixed";
+    popup.style.top = "50%";
+    popup.style.left = "50%";
+    popup.style.transform = "translate(-50%, -50%)";
+    popup.style.background = "white";
+    popup.style.padding = "20px";
+    popup.style.border = "1px solid black";
+
+    popup.innerHTML += `
+    <h2>Customize Image</h2>
+    <form>
+      <label for="image-file">Upload Image:</label>
+      <input type="file" id="image-file" name="image-file"><br><br>
+      <label for="web-link">Submit Web Link:</label>
+      <input type="text" id="web-link" name="web-link"><br><br>
+      <button type="submit">Submit</button>
+    </form>
+  `;
+    // Add the popup to the body
+    document.body.appendChild(popup);
+}
+
+ */
+
+
+
 
