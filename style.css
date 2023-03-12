@@ -212,16 +212,11 @@ header {
 }
 
 main {
-    background: linear-gradient(to bottom, #C7DDDB, #fff);
-}
-/*
-#popup {
-    width: 400px;
-    height: 300px;
-    z-index: 1;
+    background-image: url("Background Image.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
- */
 #popup {
     position: fixed;
     top: 50%;
