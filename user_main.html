@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
 <head>
   <title>
     Cover Page(hao123.com)
@@ -64,29 +64,57 @@
         <a href="#">
           <img src="news3.jpg" alt="News 3">
         </a>
+<!--
+        <div class="custom-block">
+          <div class="custom-image"><img src="" alt=""></div>
+          <a class="custom-link" href="#" target="_blank"></a>
+          <button class="customize-button">Customize</button>
+        </div>
+        <div class="custom-block">
+          <div class="custom-image"><img src="" alt=""></div>
+          <a class="custom-link" href="#" target="_blank"></a>
+          <button class="customize-button">Customize</button>
+        </div>
 
         <div class="custom-block">
-          <div class="custom-image"></div>
+          <div class="custom-image"><img src="" alt=""></div>
           <a class="custom-link" href="#" target="_blank"></a>
-          <button class="add-image">Add Image</button>
-          <button class="add-link">Add Link</button>
+          <button class="customize-button">Customize</button>
+        </div>
+-->
+        <div class="custom-block">
+          <div class="custom-image"><img src="https://example.com/image1.jpg" alt="Image 1"></div>
+          <a class="custom-link" href="#" target="_blank">Link 1</a>
+          <button class="customize-button">Customize</button>
         </div>
         <div class="custom-block">
-          <div class="custom-image"></div>
-          <a class="custom-link" href="#" target="_blank"></a>
-          <button class="add-image">Add Image</button>
-          <button class="add-link">Add Link</button>
+          <div class="custom-image"><img src="https://example.com/image2.jpg" alt="Image 2"></div>
+          <a class="custom-link" href="#" target="_blank">Link 2</a>
+          <button class="customize-button">Customize</button>
         </div>
         <div class="custom-block">
-          <div class="custom-image"></div>
-          <a class="custom-link" href="#" target="_blank"></a>
-          <button class="add-image">Add Image</button>
-          <button class="add-link">Add Link</button>
+          <div class="custom-image"><img src="https://example.com/image3.jpg" alt="Image 3"></div>
+          <a class="custom-link" href="#" target="_blank">Link 3</a>
+          <button class="customize-button">Customize</button>
         </div>
+
+        <script>
+          const customizeBtns = document.getElementsByClassName("customize-button");
+          for (let i = 0; i < customizeBtns.length; i++) {
+            customizeBtns[i].addEventListener("click", openPopup);
+          }
+        </script>
+
+
+
       </div>
     </section>
 
   </div>
 </main>
+
+
 </body>
 </html>
+
+

@@ -119,6 +119,12 @@ header {
     object-fit: contain;
 }
 
+.custom-image img {
+    width: 100%;
+    height: auto;
+}
+
+
 /* Increase size of image on hover */
 .links-grid a:hover img {
     transform: scale(1.2);
@@ -207,6 +213,12 @@ header {
 
 main {
     background: linear-gradient(to bottom, #C7DDDB, #fff);
+}
+
+#popup {
+    width: 400px;
+    height: 300px;
+    z-index: 1;
 }
 
 
