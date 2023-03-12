@@ -338,8 +338,8 @@ html {
 }
 
 .container {
-  background-image:url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-  background-repeat: no-repeat;
+  background-image:url(https://images.pexels.com/photos/3255761/pexels-photo-3255761.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+	background-repeat: no-repeat;
   background-size: cover;
 	width: 100Vw; 
   height: 100vh;
@@ -362,11 +362,11 @@ signup {
 	/*font-family: URW Chancery L, cursive;*/
 	/*font-family:"OCR A Std", monospace;*/
 
-	color: white;
+	color: black;
 
-	border-color:black;
+	/*border-color:black;
 	border-radius: 8px;
-	border-style: double;
+	border-style: double;*/
 }
 
 /*login page*/
@@ -379,11 +379,11 @@ login {
 	/*font-family: URW Chancery L, cursive;*/
 	/*font-family:"OCR A Std", monospace;*/
 
-	color: white;
+	color: black;
 	
-	border-color:black;
+	/*border-color:black;
 	border-radius: 8px;
-	border-style: double;
+	border-style: double;*/
 }
 
 /*forget password page*/
@@ -397,11 +397,11 @@ forgetPassword {
 	/*font-family: URW Chancery L, cursive;*/
 	/*font-family:"OCR A Std", monospace;*/
 
-	color: white;
+	color: black;
 	
-	border-color:black;
+	/*border-color:black;
 	border-radius: 8px;
-	border-style: double;
+	border-style: double;*/
 }
 
 
