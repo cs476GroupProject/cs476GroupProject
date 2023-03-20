@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>SignUp</title>
+
+	<script type="text/javascript" src="{% static 'js/signupValidate.js' %}"> </script>
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<otherheader class="otherheader">
+		<a href="/"><img src="{% static 'img/logo.png' %}" alt="logo" /></a>
+
+		<div class="title">
+			<h1>Sign-Up</h1>
+		</div>
+		<div id='spacer'></div>
+
+	</otherheader>
+
+	<div class="container">
+		<signup>
+			<main1>
+				<form name="signup" action="" method="post" onsubmit="/*return validateForm()*/">
+					{% csrf_token %}
+					<label for="username">Username:</label><br>
+					<input type="text" id="username" name="username"><br><br>
+					<span style="color: red;">{{error_msg_user}}</span><br>
+					<label for="email">Email:</label><br>
+					<input type="email" id="email" name="email"><br><br>
+					<span style="color: red;">{{error_msg_email}}</span><br>
+					<label for="password">Password:</label><br>
+					<input type="password" id="password" name="password"><br><br>
+					<span style="color: red;">{{error_msg_pwd}}</span><br>
+					<label for="confirm-password">Confirm Password:</label><br>
+					<input type="password" id="confirm-password" name="confirm-password"><br><br>
+					<span style="color: red;">{{error_msg_Cpwd}}</span><br>
+
+					<label for="interesting-topics">Choose three your interesting topics :</label><br>
+
+					<input type="checkbox" id="interesting-topics1" name="intersted1" value="Music">
+					<label for="interesting-topics1">Music</label>
+
+					<input type="checkbox" id="interesting-topics2" name="intersted2" value="Video">
+					<label for="interesting-topics2">Video</label>
+
+					<input type="checkbox" id="interesting-topics3" name="intersted3" value="Sport">
+					<label for="interesting-topics3">Sport</label>
+
+					<input type="checkbox" id="interesting-topics4" name="intersted4" value="Tech">
+					<label for="interesting-topics4">Tech</label><br>
+
+					<input type="checkbox" id="interesting-topics5" name="intersted5" value="Game">
+					<label for="interesting-topics5">Game</label>
+
+					<input type="checkbox" id="interesting-topics6" name="intersted6" value="Economic">
+					<label for="interesting-topics6">Economic</label>
+
+					<input type="checkbox" id="interesting-topics7" name="intersted7" value="Politics">
+					<label for="interesting-topics7">Politics</label>
+
+					<input type="checkbox" id="interesting-topics8" name="intersted8" value="Other">
+					<label for="interesting-topics8">Other</label><br>
+					<span style="color: red;">{{error_msg_interest}}</span><br>
+
+					<span style="color: red;">{{error_msg_empty}}</span><br>
+					<input type="submit" value="Sign Up" style="height:50px; width:120px">
+					
+				</form>
+
+			</main>
+
+
+		</signup>
+	</div>
+
+
+
+
+</body>
+
+</html>
