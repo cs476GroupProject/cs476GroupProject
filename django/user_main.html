@@ -1,0 +1,132 @@
+{% load static %}
+<html>
+<head>
+  <title>
+    Cover Page(hao123.com)
+  </title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap-3.4.1/css/bootstrap.min.css' %}">
+
+</head>
+ 
+<style>
+   
+    .login{
+        margin-left: 1650px;
+    }
+    .logo img{
+        margin-top: 70px;
+    }
+  
+</style>
+
+<body>
+<header>
+    <div class="logo">
+      <a href="/" ><img src="{% static 'img/logo.png' %}" alt="My Web Portal Logo"></a>
+  </div>
+
+  <div class="weather">
+    <!--
+    <p id="weather-info">Loading weather...</p> 
+    -->
+    <p id="date-info" style="margin-bottom: 20px"></p>
+  </div>
+
+  <div class="login">
+    <a href="/login"><button>Log Out</button></a>
+    <a><button>{{user_msg}}</button></a>
+  </div>
+
+</header>
+<script src="{% static 'js/script.js' %}"></script>
+<!--Google Search Bar-->
+<center>
+  <script async src="https://cse.google.com/cse.js?cx=b7f8f7666e3cb461d">
+  </script>
+  <div class="gcse-search"></div>
+</center>
+
+<main>
+  <div class="flex-container">
+    <section class="popular-links">
+      <h2>Popular Links</h2>
+      <div class="links-grid">
+        <a href="https://www.google.com/"><img src="{% static 'img/links_icons/google.png' %}" alt="Google"></a>
+        <a href="https://www.bing.com/"><img src="{% static 'img/links_icons/bing.png' %}" alt="Bing"></a>
+        <a href="https://www.youtube.com/"><img src="{% static 'img/links_icons/youtube.png' %}" alt="YouTube"></a>
+        <a href="https://www.amazon.com/"><img src="{% static 'img/links_icons/amazon.png' %}" alt="Amazon"></a>
+        <a href="https://www.reddit.com/"><img src="{% static 'img/links_icons/reddit.png' %}" alt="Reddit"></a>
+        <a href="https://www.quora.com/"><img src="{% static 'img/links_icons/quora.png' %}" alt="Quora"></a>
+        <a href="https://www.facebook.com/"><img src="{% static 'img/links_icons/facebook.png' %}" alt="FaceBook"></a>
+        <a href="https://www.twitter.com/"><img src="{% static 'img/links_icons/twitter.png' %}" alt="Twitter"></a>
+        <a href="https://www.yahoo.com/"><img src="{% static 'img/links_icons/yahoo.png' %}" alt="Yahoo!"></a>
+        <a href="https://www.github.com/"><img src="{% static 'img/links_icons/github.png' %}" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/"><img src="{% static 'img/links_icons/linkedin.png' %}" alt="LinkedIn"></a>
+        <a href="https://www.vimeo.com/"><img src="{% static 'img/links_icons/vimeo.png' %}" alt="Vimeo"></a>
+        <a href="https://www.dazn.com/"><img src="{% static 'img/links_icons/dazn.png' %}" alt="DAZN"></a>
+        <a href="https://www.microsoft.com/"><img src="{% static 'img/links_icons/microsoft.png' %}" alt="Microsoft"></a>
+        <a href="https://www.apple.com/"><img src="{% static 'img/links_icons/apple.png' %}" alt="Apple"></a>
+      </div>
+    </section>
+    
+    <section class="news-recommendations">
+    
+      <h2>News Recommendations</h2>
+      
+
+      <div class="links-grid">
+          {% for i in img %}
+              <a href="{{ i.url }}">
+                  <img src="/{{ i.img }}" alt="News 1">
+              </a>
+          {% endfor %}
+       {% for i in like %}
+              <a href="{{i.url }}">
+                  <img src="/static/img/webimg/{{ i.imgname }}">
+              </a>
+          {% endfor %}
+
+
+
+<form action="/user_page/" method="post" id="aaa" enctype="multipart/form-data">
+               {% csrf_token %}
+              <div class="form-group">
+                  <label for="exampleInputEmail1">Link</label>
+                  <input type="text" class="form-control" id="url" name="url" placeholder="url">
+                  <span style="color: red;">{{error_url_user}}</span><br>
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputEmail1">website name</label>
+                  <input type="text" class="form-control" id="name" name="webname" placeholder="name">
+                  <span style="color: red;">{{error_webname_user}}</span><br>
+              </div>
+              <div class="form-group">
+                  <input type="file" id="img" name="img">
+                  <span style="color: red;">{{error_img_user}}</span><br>
+              </div>
+              <div>
+                  <input type="hidden" value="{{user_msg}}" name="username">
+              </div>
+              <button type="submit" class="btn btn-default">upload</button>
+          </form>
+      </div>
+
+    </section>
+
+  </div>
+</main> 
+<!--
+<script type="text/javascript">
+        var text_value1 = document.getElementById('aaa');
+        text_value1.addEventListener("submit",function(e){
+            var text_value = document.getElementById('img').value;
+            if (text_value == "") {
+                alert("no empty");
+                e.preventDefault();
+            }
+        },false);
+</script>
+ -->
+</body>
+</html>

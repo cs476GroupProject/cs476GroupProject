@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Cover Page(hao123.com)
+    </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="/"><img src="{% static 'img/logo.png' %}" alt="My Web Portal Logo"></a>
+    </div>
+    <div class="weather">
+        <!--
+        <p id="weather-info">Loading weather...</p>
+        -->
+        <p id="date-info"></p>
+    </div>
+    <div class="login">
+        <a href="/login/"><button>Log In</button></a>
+        <a href="/sign_up/"><button>Sign Up</button></a>
+       
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+
+</header>
+
+<!--Google Search Bar-->
+<center>
+    <script async src="https://cse.google.com/cse.js?cx=b7f8f7666e3cb461d">
+    </script>
+    <div class="gcse-search"></div>
+</center>
+
+<main>
+    <div class="flex-container">
+        <section class="popular-links">
+            <h2>Popular Links</h2>
+            <div class="links-grid">
+                <a href="https://www.google.com/"><img src="{% static 'img/links_icons/google.png' %}" alt="Google"></a>
+                <a href="https://www.bing.com/"><img src="{% static 'img/links_icons/bing.png' %}" alt="Bing"></a>
+                <a href="https://www.youtube.com/"><img src="{% static 'img/links_icons/youtube.png' %}" alt="YouTube"></a>
+                <a href="https://www.amazon.com/"><img src="{% static 'img/links_icons/amazon.png' %}" alt="Amazon"></a>
+                <a href="https://www.reddit.com/"><img src="{% static 'img/links_icons/reddit.png' %}" alt="Reddit"></a>
+                <a href="https://www.quora.com/"><img src="{% static 'img/links_icons/quora.png' %}" alt="Quora"></a>
+                <a href="https://www.facebook.com/"><img src="{% static 'img/links_icons/facebook.png' %}" alt="FaceBook"></a>
+                <a href="https://www.twitter.com/"><img src="{% static 'img/links_icons/twitter.png' %}" alt="Twitter"></a>
+                <a href="https://www.yahoo.com/"><img src="{% static 'img/links_icons/yahoo.png' %}" alt="Yahoo!"></a>
+                <a href="https://www.github.com/"><img src="{% static 'img/links_icons/github.png' %}" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/"><img src="{% static 'img/links_icons/linkedin.png' %}" alt="LinkedIn"></a>
+                <a href="https://www.vimeo.com/"><img src="{% static 'img/links_icons/vimeo.png' %}" alt="Vimeo"></a>
+                <a href="https://www.dazn.com/"><img src="{% static 'img/links_icons/dazn.png' %}" alt="DAZN"></a>
+                <a href="https://www.microsoft.com/"><img src="{% static 'img/links_icons/microsoft.png' %}" alt="Microsoft"></a>
+                <a href="https://www.apple.com/"><img src="{% static 'img/links_icons/apple.png' %}" alt="Apple"></a>
+            </div>
+        </section>
+        
+<section class="news-recommendations">
+    <h2>News Recommendations</h2>
+    <div class="links-grid">
+        <a href="https://www.rollingstone.com/music/music-news/"><img src="{% static 'img/links_icons/music.PNG' %}" alt="Music"></a>
+        <a href="https://abcnews.go.com/Video"><img src="{% static 'img/links_icons/video.PNG' %}" alt="Video"></a>
+        <a href="https://www.tsn.ca/"><img src="{% static 'img/links_icons/sport.PNG' %}" alt="sport"></a>
+        <a href="https://abcnews.go.com/Technology"><img src="{% static 'img/links_icons/tech.PNG' %}" alt="tech"></a>
+        <a href="https://www.gamespot.com/news/"><img src="{% static 'img/links_icons/game.PNG' %}" alt="game"></a>
+        <a href="https://www.advisor.ca/news/economic/"><img src="{% static 'img/links_icons/economic.PNG' %}" alt="economic"></a>
+    </div>
+</section>
+
+</div>
+</main>
+</body>
+</html>
