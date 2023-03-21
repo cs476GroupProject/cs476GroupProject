@@ -1,4 +1,4 @@
-# cs476GroupProject
+# CS476GroupProject
 
 # Group Members:
 #
